@@ -1,6 +1,9 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors({ origin: ["http://localhost:5173"] }));
 
 const sampleEmployee = {
 	name: {
@@ -9,7 +12,7 @@ const sampleEmployee = {
 	},
 	email: "charlie.thompson@example.com",
 	picture: {
-		medium: "https://randomuser.me/api/portraits/med/men/40.jpg",
+		medium: "https://randomuser.me/api/portraits/med/men/32.jpg",
 	},
 };
 
